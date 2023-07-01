@@ -47,8 +47,8 @@ def market_summary_for(request):
     request: GET
     params: market (str)
     '''
-    if request.method == 'GET':
-        try:
+    try:
+        if request.method == 'GET':    
             logging.info('Request received for market_summary_for')
             market = request.GET.get('market')
             if not market:
@@ -59,12 +59,12 @@ def market_summary_for(request):
             response = requests.get(url, headers=headers)
             logging.info(f'Request completed for market_summary_for for market {market} => {response.json()}')
             return JsonResponse(response.json(), status=200, safe=False)
-        except ValidationError:
-            logging.error('parameter market is missing or not valid')
-            return JsonResponse({"message": "Missing or Invalid parameter 'market'"}, status=400)
-        except Exception as e:
-            logging.error(f'Error in market_summary_for for market {market}', str(e))
-            return JsonResponse(COMMON_RESPONSE['500'], status=500)
-    else:
-        logging.error('Method Not Allowed')
-        return JsonResponse(COMMON_RESPONSE['405'], status=405)
+        else:
+            logging.error('Method Not Allowed')
+            return JsonResponse(COMMON_RESPONSE['405'], status=405)
+    except ValidationError:
+        logging.error('parameter market is missing or not valid')
+        return JsonResponse({"message": "Missing or Invalid parameter 'market'"}, status=400)
+    except Exception as e:
+        logging.error(f'Error in market_summary_for for market {market}', str(e))
+        return JsonResponse(COMMON_RESPONSE['500'], status=500)
