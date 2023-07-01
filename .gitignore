@@ -6,3 +6,5 @@ __pycache__/
 # Other ignores
 db.sqlite3
 .vscode/
+*.log
+```
