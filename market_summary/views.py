@@ -36,7 +36,7 @@ def market_summary_all(request):
             logging.error('Method Not Allowed')
             return JsonResponse(COMMON_RESPONSE['405'], status=405)
     except Exception as e:
-        logging.error('Error in market_summary_all', str(e))
+        logging.error(f'Error in market_summary_all : {e}')
         return JsonResponse(COMMON_RESPONSE['500'], status=500)
 
 
@@ -66,5 +66,5 @@ def market_summary_for(request):
         logging.error('parameter market is missing or not valid')
         return JsonResponse({"message": "Missing or Invalid parameter 'market'"}, status=400)
     except Exception as e:
-        logging.error(f'Error in market_summary_for for market {market}', str(e))
+        logging.error(f'Error in market_summary_for for market {market} : {e}')
         return JsonResponse(COMMON_RESPONSE['500'], status=500)

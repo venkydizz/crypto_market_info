@@ -1,5 +1,5 @@
 from django.http import JsonResponse
-from config.common_config import CLIENT_KEY
+from config.common_config import CLIENT_KEY, COMMON_RESPONSE
 import logging
 
 
@@ -16,6 +16,6 @@ def authenicate_token(view_func):
             else:
                 return JsonResponse({"message": "Unauthorized Request"}, status=401)
         except Exception as e:
-            logging.error('Error in market_summary_all', str(e))
-            return JsonResponse({"error": str(e)}, status=500)
+            logging.error(f'Error in market_summary_all: {e}')
+            return JsonResponse(COMMON_RESPONSE['500'], status=500)
     return wrapper
