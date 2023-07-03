@@ -3,7 +3,7 @@
 
 ## Setup Prerequisites
 
-Before getting started with projjct setup, ensure that you have the following done:
+Before getting started with project setup, ensure that you have the following done:
 
 - Python: Download the latest version of Python from the official Python website (https://www.python.org/).
 - `venv` package: Install it using pip by running the following command:
@@ -57,7 +57,7 @@ Before getting started with projjct setup, ensure that you have the following do
 
 ## Other Commands
 1. ### Unit Tests:
-    To run the entire unit tests of the microservice. use the below command
+    To run the entire unit tests of the microservice, use the below command
     ```
     pytest -v
     ```
