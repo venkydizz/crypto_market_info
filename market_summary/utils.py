@@ -1,6 +1,9 @@
+"""
+This file contains the utility functions for the market_summary app.
+"""
+import logging
 from django.http import JsonResponse
 from config.common_config import CLIENT_KEY, COMMON_RESPONSE
-import logging
 
 
 def authenicate_token(view_func):
@@ -15,7 +18,7 @@ def authenicate_token(view_func):
                 return view_func(request, *args, **kwargs)
             else:
                 return JsonResponse({"message": "Unauthorized Request"}, status=401)
-        except Exception as e:
-            logging.error(f'Error in market_summary_all: {e}')
+        except Exception as exe:
+            logging.error('Error While Authenticating Token: %s', exe)
             return JsonResponse(COMMON_RESPONSE['500'], status=500)
     return wrapper

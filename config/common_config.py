@@ -1,4 +1,7 @@
-# Place to store configuration information for the application
+"""
+This module contains the common configuration for the application
+"""
+
 import os
 
 BITTREX_URL = 'https://api.bittrex.com/v3/'
@@ -14,4 +17,3 @@ COMMON_RESPONSE = {
     '500': {"message": "Internal Server Error"},
     '401': {"message": "Unauthorized Request"},
 }
-
