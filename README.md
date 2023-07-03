@@ -1,6 +1,8 @@
 # CRYPTO MARKET INFO
 **crypto_market_info** is a simple microservice which provides crypto currency market updates.
 
+**API Documentation** : https://documenter.getpostman.com/view/10449766/2s93zCaMLX
+
 ## Setup Prerequisites
 
 Before getting started with project setup, ensure that you have the following done:
