@@ -17,6 +17,3 @@ COMMON_RESPONSE = {
     '500': {"message": "Internal Server Error"},
     '401': {"message": "Unauthorized Request"},
 }
-
-CLIENT_KEY = "fgNA3C70ma"
-SERVER_KEY = "C3C2472CEE79F332"
