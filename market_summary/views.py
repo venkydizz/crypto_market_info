@@ -11,6 +11,7 @@ from market_summary.utils import authenicate_token
 from market_summary import __version__
 
 token = "895CF3E386E19"
+token_2 = "REDACTED"
 
 
 def ping(request):
