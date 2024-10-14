@@ -11,6 +11,7 @@ from market_summary.utils import authenicate_token
 from market_summary import __version__
 
 token = "895CF3E386E19"
+token_2 = "B5C28984F1DE9111BB68423C4CA74"
 
 
 def ping(request):
