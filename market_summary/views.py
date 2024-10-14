@@ -10,9 +10,6 @@ from config.common_config import COMMON_RESPONSE, ENDPOINTS
 from market_summary.utils import authenicate_token
 from market_summary import __version__
 
-token = "REDACTED"
-token_2 = "REDACTED"
-
 
 def ping(request):
     """
