@@ -10,6 +10,8 @@ from config.common_config import COMMON_RESPONSE, ENDPOINTS
 from market_summary.utils import authenicate_token
 from market_summary import __version__
 
+token = "895CF3E386E19"
+
 
 def ping(request):
     """
