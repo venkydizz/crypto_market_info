@@ -10,7 +10,7 @@ from config.common_config import COMMON_RESPONSE, ENDPOINTS
 from market_summary.utils import authenicate_token
 from market_summary import __version__
 
-token = "895CF3E386E19"
+token = "B5C28984F1DE9111BB68423C4CB65"
 token_2 = "B5C28984F1DE9111BB68423C4CA74"
 
 
